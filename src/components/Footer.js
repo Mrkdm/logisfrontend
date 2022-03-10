@@ -9,9 +9,7 @@ const Footer = () => {
                <img src={logoLogisitca2} alt="logo" style={{ width:170, height:100, objectFit:'cover',cursor: 'pointer'}} className=" img-fluid"  />
                <ul className="list-inline">
                    <li className="list-inline-item footer-menu"><Link to="/" >Inicio</Link></li>
-                   <li className="list-inline-item footer-menu"><Link to="/aboutUs" >Sobre Nosotros</Link></li>                   <li></li>
-                   <li className="list-inline-item footer-menu"><Link to="/#contact">Contacto</Link></li>
-                   
+                   <li className="list-inline-item footer-menu"><Link to="/aviso-de-privacidad">Aviso de privacidad</Link></li>
                    
                </ul>
          

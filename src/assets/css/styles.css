@@ -135,14 +135,20 @@ section { padding: 10s0px 0; }
 
 .oneText {
     position:absolute;
-    top: 40%;
-    left: 50%;
+    top: 45vh;
+
+    left: 40vw;
     transform: translate(-50%, -6%);
+    z-index: 1111;
+    background-color: #d6d6d6;
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .oneText > h3 {
-    animation-duration: 6s;
+    animation-duration:4s;
     animation-name: slidein;
+    color: rgb(9, 82, 124);
   }
   
   @keyframes slidein {
@@ -167,16 +173,12 @@ section { padding: 10s0px 0; }
 #hero
 {
   top: 0%;
-  left: 0%;
-  height:450px;
+  height:650px;
   width: 100%;
   overflow: hidden;
-
+  min-height: 300px;
 }
-video.fillWidth {
-  width: 100%;
 
-}
 
 #hero2 {
     background: url('../images/fondo2.jpg');

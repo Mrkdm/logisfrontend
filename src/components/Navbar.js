@@ -29,12 +29,16 @@ const Navbar = () => {
           <b>Casas en venta</b>
         </Link>
         <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-          <Link className="dropdown-item" to="/casasMerida">Mérida</Link>
+          {/*<Link className="dropdown-item" to="/">Yucátan</Link>*/}
+
           <Link className="dropdown-item" to="/casasCancun">Cancún</Link>
+          <Link className="dropdown-item" to="/casasTulum">Tulum</Link>
+          <Link className="dropdown-item" to="/casasPlaya">Playa del Carmen</Link>
+
     
         </div>
       </li>
-      <li className="nav-item dropdown">
+     { /*<li className="nav-item dropdown">
         <Link className="nav-link dropdown-toggle"   style={{fontSize:'18px'}}to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
          <b> Casas en renta</b>
         </Link>
@@ -43,7 +47,7 @@ const Navbar = () => {
           <Link className="dropdown-item" to="#">Cancun</Link>
    
         </div>
-      </li>
+      </li>*/}
 
     </ul>
  

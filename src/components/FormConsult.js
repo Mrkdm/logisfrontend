@@ -55,7 +55,8 @@ const FormConsult = () => {
             </p>
         </div>
         <div className="col-md-6 mt-4">
-            <div className="row">
+           <form onSubmit={onSubmitSendServer}>
+           <div className="row">
                 <div className="col-md-6">
                     <div className="form-group">
                         <input type="text" onChange={onChangeName} required className="form-control" placeholder="Nombre" />
@@ -63,7 +64,7 @@ const FormConsult = () => {
                 </div>
                 <div className="col-md-6">
                     <div className="form-group">
-                        <input type="text" onChange={onChangeLastname} className="form-control" placeholder="Apellido" />
+                        <input type="text" onChange={onChangeLastname} required className="form-control" placeholder="Apellido" />
                     </div>
                 </div>
                 <div className="col-md-12">
@@ -78,12 +79,13 @@ const FormConsult = () => {
                 </div>
                 <div className="col-md-12">
                     <div className="form-group">
-                        <button onClick={onSubmitSendServer} className="btn btn-success full-width">
+                        <button type='submit'  className="btn btn-success full-width">
                             Enviar
                         </button>
                     </div>
                 </div>
             </div>
+           </form>
         </div>
     </div>
     )

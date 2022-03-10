@@ -5,6 +5,8 @@ import Logo from '../../assets/images/Logo-Logistica.png'
 import axios from 'axios'
 import Navbar from '../../components/Navbar'
 import FormQuestion from '../../components/FormQuestion'
+import WhatsappBottom from '../../components/WhatsappBottom'
+import Footer from '../../components/Footer'
 
 
 
@@ -87,7 +89,11 @@ const CasasMerida = () => {
                     }
                 </div>
             </div>
-            <div class="fixed-bottom "><a href="https://api.whatsapp.com/send?phone=5219982323301"><i class="fab fa-whatsapp" style={{ fontSize: 55, float: 'right', margin: 30, cursor: 'pointer', color: '#25D366' }}></i></a></div>
+            <br/>
+            <br/>
+            <WhatsappBottom/>
+            
+            <Footer/>
         </div>
     )
 }
