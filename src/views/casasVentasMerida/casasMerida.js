@@ -10,23 +10,24 @@ import Footer from '../../components/Footer'
 
 
 
-const CasasPlaya = () => {
+const CasasMerida = () => {
 
     const navigate = useNavigate()
     const [casas, setCasas] = useState([])
  
     useEffect(() => {
         (async () => {
-           await axios.get('https://logis.live/api/images/ubication/Playa').then((res) => setCasas(res.data)).catch((err) => console.log(err))
+           await axios.get('https://logis.live/api/images/ubication/Merida').then((res) => setCasas(res.data)).catch((err) => console.log(err))
         })();
     }, [])
 
     return (
         <div>
             <Navbar />
-            <div className="container">
-            <h1 className=' m-2 h1'>Casas en Playa del Carmen</h1>
+            <div className="container ">
+            <h1 className=' m-2 h1'>Casas en Mérida</h1>
             <hr />
+
                 <div className="row">
                     {
                         casas.map((img) => {
@@ -70,7 +71,7 @@ const CasasPlaya = () => {
                                                     <p>|</p>
                                                 </div>
                                                 <div className="col-lg-2 col-sm-6">
-                                                    <p>Quintana Roo</p>
+                                                    <p>Yucatán</p>
                                                 </div>
                                             </div>
                                             <div className="row">
@@ -101,4 +102,4 @@ const CasasPlaya = () => {
     )
 }
 
-export default CasasPlaya
+export default CasasMerida

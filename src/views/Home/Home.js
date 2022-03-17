@@ -72,14 +72,14 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="portfolio-container">
                                 <div className="portfolio-details">
-                                    <Link to="/casasTulum">
-                                        <h2>Tulum</h2>
+                                    <Link to="/casasCancun">
+                                        <h2>Cancún</h2>
                                     </Link>
 
                                 </div>
                                 <AwesomeSlider>
                                     {
-                                        casasTulum.map((imgs) => {
+                                        casasCancun.map((imgs) => {
 
                                             return (
 
@@ -99,14 +99,14 @@ const Home = () => {
                         <div className="col-md-6">
                             <div className="portfolio-container">
                                 <div className="portfolio-details">
-                                    <Link to="/casasCancun">
-                                        <h2>Cancún</h2>
+                                    <Link to="/casasMerida">
+                                        <h2>Mérida</h2>
                                     </Link>
 
                                 </div>
                                 <AwesomeSlider>
                                     {
-                                        casasCancun.map((imgs) => {
+                                        casasMerida.map((imgs) => {
 
                                             return (
 
@@ -152,19 +152,19 @@ const Home = () => {
                         <div className="col-md-6 content-center">
                             <div className="portfolio-container">
                                 <div className="portfolio-details">
-                                    <Link to="/casas">
-                                        <h2>Quintana Roo y Yucátan</h2>
+                                    <Link to="/casasTulum">
+                                        <h2>Tulum</h2>
                                     </Link>
 
                                 </div>
                                 <AwesomeSlider>
                                     {
-                                        totalCasas.map((imgs) => {
+                                        casasTulum.map((imgs) => {
 
                                             return (
 
                                                 <div key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }}  />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} />
                                                 </div>
 
 
@@ -181,12 +181,43 @@ const Home = () => {
             </section>
 
             <section>
+                <div className="container-fluid">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="portfolio-container">
+                                <div className="portfolio-details">
+                                    <Link to="/casasTulum">
+                                        <h2>Quintana Roo y Yucatán</h2>
+                                    </Link>
+
+                                </div>
+                                <AwesomeSlider style={{height:"55vh"}}>
+                                    {
+                                        totalCasas.map((imgs) => {
+
+                                            return (
+
+                                                <div  key={imgs._id}>
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} />
+                                                </div>
+
+
+                                            )
+
+                                        })
+                                    }
+                                </AwesomeSlider>
+                            </div></div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
                 <section id="hero2">
                     <div className="container">
                         <div className="mt-5">
-                            <h1 className="">Estas interesado en vender tu casa?</h1>
+                            <h1 className="titleHero2">¿Estas interesado en comprar, rentar o vender un bien inmueble?</h1>
 
-                            <p className="text-white">El equipo de Logistica inmobiliaria esta dispuesto a ayudarte en lo necesario para vender tu inmueble contactanos ahora! </p>
                         </div>
                     </div>
                     <div className="container ">
@@ -202,27 +233,27 @@ const Home = () => {
                         <div className='col-lg-4 col-md-6'>
 
                             <h5 className=''><b>AVALUOS</b></h5>
-                            <hr/>
+                            <hr />
                             <br />
                             <div className='mt-2 mb-4'>
                                 <img className='img-fluid' style={{ width: "200px", objectFit: "cover" }} src={logoAFA} />
                             </div>
 
-                            <a  href="https://api.whatsapp.com/send?phone=5219982323301" className='btn btn-outline-primary'>Contacto</a>
+                            <a href="https://api.whatsapp.com/send?phone=5219982323301" className='btn btn-outline-primary'>Contacto</a>
                         </div>
                         <div className='col-lg-4 mt-5 mb-5'></div>
                         <div className='col-lg-4 col-md-6'>
                             <h5 className=''><b>SERVICIOS LEGALES</b></h5>
-                            <hr/>
+                            <hr />
                             <div className='mt-4 mb-4'>
                                 <img className='img-fluid' style={{ width: "150px", objectFit: "cover" }} src={logoMVS} />
-                                
+
                             </div>
-                            <a  href="https://api.whatsapp.com/send?phone=5219982323301" className='btn btn-outline-primary'>Contacto</a>
+                            <a href="https://api.whatsapp.com/send?phone=5219982323301" className='btn btn-outline-primary'>Contacto</a>
 
 
                         </div>
-                      
+
                     </div>
                 </div>
             </section>

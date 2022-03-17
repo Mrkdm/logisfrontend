@@ -56,12 +56,13 @@ const FormQuestion = (props) => {
     return (
         <>
             <div className="">
-                <button type="button" className="btn btn-outline-dark btn-sm mt-4" data-toggle="modal" data-target={"." + props.data + "-modal-lg"}>Contactar</button>
+                <button type="button" className="btn btn-outline-dark btn-sm mt-2" data-toggle="modal" data-target={"." + props.data + "-modal-lg"}>Contactar</button>
 
             </div>
             <div class={"modal fade " + props.data + "-modal-lg"} tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
+                   
+                   <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="exampleModalLabel">Nuevo mensage</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -76,14 +77,14 @@ const FormQuestion = (props) => {
                                         <img src={Logo} style={{ width: 270, objectFit: 'cover' }} alt="" />
                                     </div>
                                     <div className="col-lg-6">
-                                        <form>
+                                        <form onSubmit={onSubmitSendServer}>
                                             <div class="form-group">
 
                                                 <input type="hidden" value={props.data} class="form-control" id="recipient-name" />
                                             </div>
                                             <div class="form-group">
                                                 <label for="recipient-name" class="col-form-label">Email:</label>
-                                                <input type="text" onChange={onChangeEmail} class="form-control" id="recipient-name" />
+                                                <input type="email" required onChange={onChangeEmail} class="form-control" id="recipient-name" />
                                             </div>
                                             <div className="row">
                                                 <div className="col-lg-6">
@@ -111,6 +112,7 @@ const FormQuestion = (props) => {
                                                 </div>
 
                                             </div>
+                                            <button type="submit"  class="btn btn-primary">Enviar</button>
                                         </form>
                                     </div>
                                 </div>
@@ -118,9 +120,10 @@ const FormQuestion = (props) => {
                         </div>
                         <div class="modal-footer">
                             <a className="btn btn-secondary" href="tel:9983387357">9983387357</a>
-                            <button type="button" onClick={onSubmitSendServer} class="btn btn-primary">Enviar</button>
+                            
                         </div>
                     </div>
+                   
                 </div>
             </div>
         </>

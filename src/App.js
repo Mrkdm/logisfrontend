@@ -5,6 +5,7 @@ import Home from './views/Home/Home'
 import CasasCancun from './views/casasVentasCancun/casasCancun';
 import CasasPlaya from './views/casasVentasPlaya/casasPlaya';
 import CasasTulum from './views/casasVentasTulum/casasTulum';
+import CasasMerida from './views/casasVentasMerida/casasMerida';
 
 import Casas from './views/totalCasas/Casas'
 import CasaId from './views/casaId/Casa';
@@ -21,7 +22,10 @@ function App() {
       <Route path="/casasCancun" exact element={<CasasCancun/>} />
       <Route path="/casasPlaya" exact element={<CasasPlaya />} /> 
       <Route path="/casasTulum" exact element={<CasasTulum />} /> 
+      <Route path="/casasMerida" exact element={<CasasMerida />} /> 
+
       <Route path="/aviso-de-privacidad" exact element={<Terminosycondiciones/>} /> 
+
       <Route path="/casas" exact element={<Casas/>}/>
 
       <Route path="/casa/:id" exact element={<CasaId /> }/>

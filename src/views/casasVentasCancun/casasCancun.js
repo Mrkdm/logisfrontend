@@ -17,13 +17,16 @@ const CasasMerida = () => {
     useEffect(() => {
         (async () => {
             await axios.get('https://logis.live/api/images/ubication/Cancun').then((res) => setCasas(res.data)).catch((err) => console.log(err))
+
         })();
+
     }, [])
     return (
         <div>
             <Navbar />
             <div className="container ">
-
+                <h1 className=' m-2 h1'>Casas en Cancún</h1>
+                <hr />
                 <div className="row">
                     {
                         casas.map((img) => {
@@ -50,12 +53,18 @@ const CasasMerida = () => {
                                                         {img.bathRooms}
                                                     </p>
                                                 </div>
-                                                <div className="col-lg-4 col-sm-6">
-                                                    <p>
-                                                        <i class="fas fa-home m-3"></i>
-                                                        {img.mtsTerr}m²
-                                                    </p>
-                                                </div>
+                                                {!img.mtsTerr == null ?
+
+                                                    <div></div>
+                                                    :
+                                                    <div className="col-lg-4 col-sm-6">
+                                                        <p>
+                                                            <i class="fas fa-home m-3"></i>
+                                                            {img.mtsTerr}m²
+                                                        </p>
+                                                    </div>
+
+                                                }
 
                                             </div>
                                             <div className="row">
@@ -69,9 +78,15 @@ const CasasMerida = () => {
                                                     <p>Quintana Roo</p>
                                                 </div>
                                             </div>
+
+                                            <div className="row">
+                                                <div className="col-lg-2">
+                                                    <h4 className="text-primary">{img.typeOperation}</h4>
+                                                </div>
+                                            </div>
                                             <div className="row">
 
-                                                <div className="col-lg-2">
+                                                <div className="col-lg-2 ">
 
 
                                                     <FormQuestion data={img._id} />
@@ -79,7 +94,9 @@ const CasasMerida = () => {
 
 
                                                 </div>
+
                                             </div>
+
                                         </div>
 
                                     </div>
@@ -89,11 +106,11 @@ const CasasMerida = () => {
                     }
                 </div>
             </div>
-            <br/>
-            <br/>
-            <WhatsappBottom/>
-            
-            <Footer/>
+            <br />
+            <br />
+            <WhatsappBottom />
+
+            <Footer />
         </div>
     )
 }

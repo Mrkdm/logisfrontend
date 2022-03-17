@@ -24,6 +24,10 @@ const Navbar = () => {
       <li className="nav-item active">
         <Link className="nav-link " style={{fontSize:'18px'}} to="/"><b>Inicio</b> <span className="sr-only">(current)</span></Link>
       </li>
+
+      <li className="nav-item active">
+        <Link className="nav-link " style={{fontSize:'18px'}} to="/"><b>Aviso de privacidad</b> <span className="sr-only"></span></Link>
+      </li>
       <li className="nav-item dropdown">
         <Link className="nav-link dropdown-toggle" style={{fontSize:'18px'}} to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <b>Casas en venta</b>

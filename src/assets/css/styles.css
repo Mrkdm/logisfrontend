@@ -153,7 +153,6 @@ section { padding: 10s0px 0; }
   
   @keyframes slidein {
     from {
-      margin-left: 100%;
       width: 100%;
       opacity:0;
     }
@@ -181,16 +180,33 @@ section { padding: 10s0px 0; }
 
 
 #hero2 {
-    background: url('../images/fondo2.jpg');
+    background: url('https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-size: cover;
     background-attachment: fixed;
-    padding-top: 90px;
+    padding-top: 30px;
     min-height: 700px;
     color: var(--white-color);
+    position: relative;
+
+}
+
+#hero2:before{
+    content:'';
+	position: absolute;
+    top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.titleHero2{
+    position: relative;
 }
 
 #hero p {
     color: var(--white-color);
+
 }
 
 /* //////////////
@@ -200,7 +216,7 @@ section { padding: 10s0px 0; }
 .portfolio-container {
     position: relative;
     overflow: hidden;
-    margin: 10px 0;
+    margin: 10px 0 20px;
     border-radius: 2px;
 }
 
@@ -222,6 +238,8 @@ section { padding: 10s0px 0; }
     left: 25px;
     z-index: 9000;
 }
+
+
 
 .portfolio-details h2 {
     margin-bottom: 0px;

@@ -1,5 +1,5 @@
-import React, { useState, useEffect} from 'react'
-import {  useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 import axios from 'axios'
@@ -14,10 +14,10 @@ const CasasTulum = () => {
 
     const navigate = useNavigate()
     const [casas, setCasas] = useState([])
- 
+
     useEffect(() => {
         (async () => {
-           await axios.get('https://logis.live/api/images/ubication/Tulum').then((res) => setCasas(res.data)).catch((err) => console.log(err))
+            await axios.get('https://logis.live/api/images/ubication/Tulum').then((res) => setCasas(res.data)).catch((err) => console.log(err))
         })();
     }, [])
 
@@ -26,19 +26,23 @@ const CasasTulum = () => {
             <Navbar />
             <div className="container ">
 
+            <h1 className=' m-2 h1'>Casas en Tulum</h1>
+            <hr />
+
                 <div className="row">
                     {
                         casas.map((img) => {
-                            
+
                             return (
                                 <div className="col-lg-12 p-2 border m-4 bgLightGrey">
+
                                     <div className="row">
                                         <div className="col-lg-4 col-md-12">
                                             <img src={img.url[0]} className="img-fluid" alt="" />
                                         </div>
                                         <div className="col-lg-8">
 
-                                            <p style={{cursor:'pointer'}} onClick={()=>{navigate( `/casa/${img._id}`)} }className="colorPink m-3">{img.title}</p>
+                                            <p style={{ cursor: 'pointer' }} onClick={() => { navigate(`/casa/${img._id}`) }} className="colorPink m-3">{img.title}</p>
                                             <hr />
                                             <div className="row">
                                                 <div className="col-lg-2 col-sm-6">
@@ -53,12 +57,15 @@ const CasasTulum = () => {
                                                         {img.bathRooms}
                                                     </p>
                                                 </div>
-                                                <div className="col-lg-4 col-sm-6">
-                                                    <p>
-                                                        <i class="fas fa-home m-3"></i>
-                                                        {img.mtsTerr}m²
-                                                    </p>
-                                                </div>
+                                                {img.mtsTerr == null ?
+                                                    <div className="col-lg-4 col-sm-6">
+                                                        <p>
+                                                            <i class="fas fa-home m-3"></i>
+                                                            {img.mtsTerr}m²
+                                                        </p>
+                                                    </div> : <div className=""></div>
+
+                                                }
 
                                             </div>
                                             <div className="row">
@@ -76,7 +83,7 @@ const CasasTulum = () => {
                                                 <div className="col-lg-2">
 
 
-                                                   <FormQuestion data={img._id}/>
+                                                    <FormQuestion data={img._id} />
 
 
 
@@ -91,11 +98,11 @@ const CasasTulum = () => {
                     }
                 </div>
             </div>
-            <br/>
-            <br/>
-            <WhatsappBottom/>
+            <br />
+            <br />
+            <WhatsappBottom />
 
-            <Footer/>
+            <Footer />
         </div>
     )
 }
