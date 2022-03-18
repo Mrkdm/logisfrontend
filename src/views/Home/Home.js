@@ -24,6 +24,8 @@ const Home = () => {
     const [casasTulum, setCasasTulum] = useState([]);
     const [casasPlaya, setCasasPlaya] = useState([]);
 
+    //ESTADO COMO QUINTANA ROO O YUCATAN
+
     useEffect(() => {
         (async () => {
             await axios.get('https://logis.live/api/images/ubication/Cancun').then((res) => { setCasasCancun(res.data) }).catch((err) => console.log(err))
@@ -51,7 +53,7 @@ const Home = () => {
 
             <div className='container-fluid'>
                 <div className='oneText'>
-                    <h3><b>Bienvenido! a LOGISTÍCA INMOBILIARIA</b></h3>
+                    <h3><b>Bienvenido! a LOGÍSTICA INMOBILIARIA</b></h3>
                 </div>
                 <AwesomeSlider style={{ height: "500px", minHeight: "500px" }}>
                     <div data-src={fondo3} />
@@ -84,7 +86,7 @@ const Home = () => {
                                             return (
 
                                                 <div key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} alt="Portfolio 01" />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: "100vw", height: "90vh", objectFit: 'cover' }} alt="Portfolio 01" />
                                                 </div>
 
 
@@ -111,7 +113,7 @@ const Home = () => {
                                             return (
 
                                                 <div key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} alt="Portfolio 01" />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: "100vw", height: "100vh", objectFit: 'cover' }} alt="Portfolio 01" />
                                                 </div>
 
 
@@ -138,7 +140,7 @@ const Home = () => {
                                             return (
 
                                                 <div key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} alt="Portfolio 01" />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: "100vw", height: "90vh", objectFit: 'cover' }} alt="Portfolio 01" />
                                                 </div>
 
 
@@ -149,7 +151,7 @@ const Home = () => {
                                 </AwesomeSlider>
                             </div>
                         </div>
-                        <div className="col-md-6 content-center">
+                        <div className="col-md-6 ñ">
                             <div className="portfolio-container">
                                 <div className="portfolio-details">
                                     <Link to="/casasTulum">
@@ -164,7 +166,7 @@ const Home = () => {
                                             return (
 
                                                 <div key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: "100vw", height:"90vh", objectFit: 'cover' }} />
                                                 </div>
 
 
@@ -186,7 +188,7 @@ const Home = () => {
                         <div className="col-lg-12">
                             <div className="portfolio-container">
                                 <div className="portfolio-details">
-                                    <Link to="/casasTulum">
+                                    <Link to="/casas">
                                         <h2>Quintana Roo y Yucatán</h2>
                                     </Link>
 
@@ -198,7 +200,7 @@ const Home = () => {
                                             return (
 
                                                 <div  key={imgs._id}>
-                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: 1800, height: 410, objectFit: 'cover' }} />
+                                                    <img src={imgs.url[0]} className="img-fluid" style={{ width: "100vw", height: "90vh", objectFit: 'cover' }} />
                                                 </div>
 
 

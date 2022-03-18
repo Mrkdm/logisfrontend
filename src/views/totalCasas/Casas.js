@@ -1,6 +1,6 @@
 
-import React, { useState, useEffect} from 'react'
-import {  useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 import axios from 'axios'
@@ -13,12 +13,17 @@ const Casas = () => {
 
     const navigate = useNavigate()
     const [casas, setCasas] = useState([])
- 
+
+    const [estado, setEstado] = useState("");
+
     useEffect(() => {
         (async () => {
-           await axios.get('https://logis.live/api/images/').then((res) => setCasas(res.data)).catch((err) => console.log(err))
+            await axios.get('https://logis.live/api/images/').then((res) => setCasas(res.data)).catch((err) => console.log(err))
+
         })();
     }, [])
+
+    
 
     return (
         <div>
@@ -28,7 +33,7 @@ const Casas = () => {
                 <div className="row">
                     {
                         casas.map((img) => {
-                            
+
                             return (
                                 <div className="col-lg-12 p-2 border m-4 bgLightGrey">
                                     <div className="row">
@@ -37,9 +42,9 @@ const Casas = () => {
                                         </div>
                                         <div className="col-lg-8">
 
-                                            <p style={{cursor:'pointer'}} onClick={()=>{navigate( `/casa/${img._id}`)} }className="colorPink m-3">{img.title}</p>
+                                            <p style={{ cursor: 'pointer' }} onClick={() => { navigate(`/casa/${img._id}`) }} className="colorPink m-3">{img.title}</p>
                                             <hr />
-                                            <div className="row">
+                                                <div className="row">
                                                 <div className="col-lg-2 col-sm-6">
                                                     <p>
                                                         <i class="fas fa-bed m-3"></i>
@@ -68,14 +73,14 @@ const Casas = () => {
                                                     <p>|</p>
                                                 </div>
                                                 <div className="col-lg-3 col-sm-6">
-                                                    <p>Quintana Roo</p>
+                                                    <p>{img.typeOperation}</p>
                                                 </div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-lg-2">
 
 
-                                                   <FormQuestion data={img._id}/>
+                                                    <FormQuestion data={img._id} />
 
 
 
@@ -91,13 +96,13 @@ const Casas = () => {
                 </div>
             </div>
 
-            <br/>
-            <br/>
-            <WhatsappBottom/>
+            <br />
+            <br />
+            <WhatsappBottom />
 
-            <Footer/>
+            <Footer />
         </div>
-        )
+    )
 }
 
 export default Casas

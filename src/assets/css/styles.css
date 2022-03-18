@@ -135,9 +135,9 @@ section { padding: 10s0px 0; }
 
 .oneText {
     position:absolute;
-    top: 45vh;
+    top:500px;
 
-    left: 40vw;
+    left: 50vw;
     transform: translate(-50%, -6%);
     z-index: 1111;
     background-color: #d6d6d6;
